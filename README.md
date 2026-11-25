@@ -1,6 +1,6 @@
 # DSH 网课助手
 
-DeepSeek Harness 0.2.2-rc.5 的 Cordis 插件。安装包内置初始化提示词。首次启用时自动下载并校验固定版本的 DrissionPageMCP、安装运行依赖，然后在专用 Chrome 窗口中打开网课向导。Chrome 调试地址默认为 `127.0.0.1:7891`。
+面向 DeepSeek Harness 0.2.2-rc.5 的网课助手。启用后发送内置提示词，自动安装 DrissionPageMCP，并在默认调试端口为 `7891` 的专用 Chrome 中打开向导。向导帮助选择平台、登录方式和学习模式，并生成进度、成绩和截图报告。
 
 ## 安装
 
@@ -9,13 +9,13 @@ DeepSeek Harness 0.2.2-rc.5 的 Cordis 插件。安装包内置初始化提示�
 DSH Desktop 用户应先完全退出客户端，再执行安装命令。
 
 ```sh
-dsh plugin --profile desktop add https://github.com/Acernus5417/webclass/releases/download/v0.1.0/dsh-webclass-0.1.0.tgz
+dsh plugin --profile desktop add https://github.com/Acernus5417/webclass/releases/download/v0.1.1/dsh-webclass-0.1.1.tgz
 ```
 
-Web 用户可将 `--profile desktop` 换成 `--profile web`。安装已下载的安装包时，可传入 `file:/绝对路径/dsh-webclass-0.1.0.tgz`。Windows 上，若桌面版提供了 `~/.dsh/bin/dsh-electron-cli.cjs`，也可用以下命令安装。
+Web 用户可将 `--profile desktop` 换成 `--profile web`。安装已下载的安装包时，可传入 `file:/绝对路径/dsh-webclass-0.1.1.tgz`。Windows 上，若桌面版提供了 `~/.dsh/bin/dsh-electron-cli.cjs`，也可用以下命令安装。
 
 ```powershell
-node "$env:USERPROFILE/.dsh/bin/dsh-electron-cli.cjs" plugin --profile desktop add 'https://github.com/Acernus5417/webclass/releases/download/v0.1.0/dsh-webclass-0.1.0.tgz'
+node "$env:USERPROFILE/.dsh/bin/dsh-electron-cli.cjs" plugin --profile desktop add 'https://github.com/Acernus5417/webclass/releases/download/v0.1.1/dsh-webclass-0.1.1.tgz'
 ```
 
 重新打开 DSH。插件加载时会把内置提示词作为首条用户消息原样发送给 DSH 默认模型。初始化每次创建新的 DSH 会话，对模型开放文本输入和输出。只有最终文本以 `超级黑暗大肥鱼:` 开头才进入平台选择。默认最多尝试 3 次，向导中可手动重试。用 `/webclass` 可查看向导地址、错误信息或报告位置。

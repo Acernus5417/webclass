@@ -1,6 +1,6 @@
 {
   "name": "dsh-webclass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness 网课助手",
   "repository": { "type": "git", "url": "git+https://github.com/Acernus5417/webclass.git" },
   "type": "module",
